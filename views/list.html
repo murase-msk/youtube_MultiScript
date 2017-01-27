@@ -1,0 +1,23 @@
+{% include "inc/header" %}
+
+<!-- Thumbnails  -->
+<div class="container-fluid">
+	<div class="container">
+		<div class="row">
+			{% for oneInfo in result%}
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+				<div class="thumbnail">
+					<img src="./stat/resource/{{oneInfo[1]}}.jpg">
+					<div class="caption">
+						<h3>{{oneInfo[2]}}</h3>
+						<p>段落。</p>
+						<p>...</p>
+						<p><a href="/watch/{{oneInfo[1]}}" class="btn btn-default" role="button">ボタン</a></p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+</div>
+{% include "inc/footer" %}

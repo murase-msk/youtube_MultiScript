@@ -1,0 +1,28 @@
+{% include "inc/header" %}
+
+
+<!-- Jumbotron  -->
+<div class="container">
+	<div class="jumbotron">
+		<h1>Youtube MultiScript</h1>
+		<p>日本語と英語の字幕を同時表示</p>
+		<p><a class="btn btn-primary btn-lg" href="./jumbotron.html" role="button">もっと詳しく</a></p>
+		
+		<form class="main-form" method="post" action="/new">
+	    <div class="input-group">
+	      <span class="input-group-btn">
+	        <button type="submit" class="btn btn-primary btn-lg">登録</button>
+	      </span>
+	      <input type="text" class="form-control input-lg" placeholder="https://www.youtube.com/watch?v=...." name="url">
+	    </div><!-- /input-group -->
+		</form>
+
+
+	</div>
+</div>
+
+{% if error %}
+		<p>{{error.message}}</p>
+{% endif %}
+
+{% include "inc/footer" %}
